@@ -31,7 +31,7 @@
     "gatsby-remark-autolink-headers": "^2.3.13",
     "gatsby-remark-embed-gist": "^1.2.1",
     "gatsby-remark-embedder": "^3.0.0",
-    "gatsby-remark-images": "^3.3.30",
+    "gatsby-remark-images": "^3.3.32",
     "gatsby-theme-micro-blog": "^1.1.2",
     "gatsby-transformer-remark": "^2.8.35",
     "gatsby-transformer-sharp": "^2.5.15",
