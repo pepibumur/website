@@ -34,7 +34,7 @@
     "gatsby-remark-images": "^3.3.32",
     "gatsby-theme-micro-blog": "^1.1.2",
     "gatsby-transformer-remark": "^2.8.35",
-    "gatsby-transformer-sharp": "^2.5.15",
+    "gatsby-transformer-sharp": "^2.5.16",
     "prismjs": "^1.21.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
