@@ -83,6 +83,14 @@ const HomePage = () => {
             <i>(work in progress)</i>
           </Styled.p>
         </div>
+        <div sx={projectStyle}>
+          <Styled.h3>CRAFTWEG</Styled.h3>
+          <Styled.p>
+            An uncensored, ongoing story about life, software craftsmanship,
+            building open-source communities, and pursuing simplicity in a
+            complex world.
+          </Styled.p>
+        </div>
       </div>
     </Layout>
   )

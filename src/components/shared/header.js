@@ -87,7 +87,7 @@ const modes = ["light", "black", "dark", "deep", "hack", "pink"]
 
 const Sections = () => {
   const [mode, setMode] = useColorMode()
-  const cycleMode = e => {
+  const cycleMode = (e) => {
     const i = modes.indexOf(mode)
     const n = (i + 1) % modes.length
     setMode(modes[n])
@@ -108,8 +108,7 @@ const Sections = () => {
       <SectionButton title="Pedro Piñera" path="/" index={0} />
       <SectionButton title="Blog" path="/blog" index={1} />
       <SectionButton title="About" path="/about" index={1} />
-      <SectionButton title="Open Source" path="/open-source" index={4} />
-      <SectionButton title="Wiki" path="/wiki" index={6} />
+      <SectionButton title="Craftweg" url="https://craftweg.com" index={4} />
       <div sx={{ mx: "auto" }} />
       <ColorButton mode={mode} onClick={cycleMode} />
     </div>
