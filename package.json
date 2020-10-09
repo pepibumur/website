@@ -48,6 +48,7 @@
     "url-join": "^4.0.1"
   },
   "devDependencies": {
+    "gatsby-plugin-netlify": "^2.3.17",
     "prettier": "^2.1.2",
     "slug": "^3.3.4"
   },
