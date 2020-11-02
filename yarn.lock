@@ -7717,10 +7717,10 @@ gatsby-remark-embedder@^4.0.0:
     node-fetch "^2.6.1"
     unist-util-visit "^2.0.3"
 
-gatsby-remark-images@^3.3.35:
-  version "3.3.35"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-3.3.35.tgz#5d0de0533865ce090a6621e04f2df28a7d5a5363"
-  integrity sha512-7YOgAfplZt++JLI6TD9vrRcIIaWdupvQetQ6IvMYpmoBCASyHLYlGt00jg2l9hvOLh8kSCeGauBNzwvoPeSyzA==
+gatsby-remark-images@^3.3.40:
+  version "3.3.40"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-3.3.40.tgz#da605c42de282225a1a133bbfb0aadbecaf47071"
+  integrity sha512-GVFvGdOOApG5SaNqPgbTqfiXoaf07e3bIa1pZgIyy8lC0EpL6Fq8RDtcVz+Xu+fzxEMbRJGdTF7bXxAkJ6Er0w==
   dependencies:
     "@babel/runtime" "^7.11.2"
     chalk "^2.4.2"
