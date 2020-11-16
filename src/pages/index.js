@@ -77,13 +77,6 @@ const HomePage = () => {
           </Styled.p>
         </div>
         <div sx={projectStyle}>
-          <Styled.h3>TUIST PRO</Styled.h3>
-          <Styled.p>
-            Faster Xcode builds and insights from your Xcode projects ―{" "}
-            <i>(work in progress)</i>
-          </Styled.p>
-        </div>
-        <div sx={projectStyle}>
           <Styled.h3>CRAFTWEG</Styled.h3>
           <Styled.p>
             An uncensored, ongoing story about life, software craftsmanship,
