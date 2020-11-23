@@ -12,7 +12,7 @@
     "@mdx-js/mdx": "^1.6.21",
     "@mdx-js/react": "^1.6.19",
     "@theme-ui/presets": "^0.3.4",
-    "@theme-ui/prism": "^0.3.0",
+    "@theme-ui/prism": "^0.3.4",
     "@use-hook/use-cookie": "^0.1.4",
     "color": "^3.1.3",
     "focus-visible": "^5.2.0",
