@@ -41,7 +41,7 @@
     "react-dom": "^16.14.0",
     "react-helmet": "^6.1.0",
     "react-helmet-async": "^1.0.7",
-    "react-icons": "^3.11.0",
+    "react-icons": "^4.1.0",
     "react-share": "^4.3.1",
     "theme-ui": "^0.3.4",
     "underscore": "^1.12.0",
