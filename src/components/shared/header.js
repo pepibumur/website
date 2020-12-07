@@ -108,7 +108,6 @@ const Sections = () => {
       <SectionButton title="Pedro Piñera" path="/" index={0} />
       <SectionButton title="Blog" path="/blog" index={1} />
       <SectionButton title="About" path="/about" index={1} />
-      <SectionButton title="Craftweg" url="https://craftweg.com" index={4} />
       <div sx={{ mx: "auto" }} />
       <ColorButton mode={mode} onClick={cycleMode} />
     </div>
