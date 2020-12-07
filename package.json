@@ -10,7 +10,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.12",
     "@mdx-js/mdx": "^1.6.21",
-    "@mdx-js/react": "^1.6.21",
+    "@mdx-js/react": "^1.6.22",
     "@theme-ui/presets": "^0.3.4",
     "@theme-ui/prism": "^0.3.4",
     "@use-hook/use-cookie": "^0.1.4",
