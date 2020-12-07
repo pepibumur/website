@@ -22,18 +22,6 @@ module.exports = {
     },
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-netlify`,
-      options: {
-        headers: {}, // option to add more headers. `Link` headers are transformed by the below criteria
-        allPageHeaders: [], // option to add headers for all pages. `Link` headers are transformed by the below criteria
-        mergeSecurityHeaders: true, // boolean to turn off the default security headers
-        mergeLinkHeaders: true, // boolean to turn off the default gatsby js headers
-        mergeCachingHeaders: true, // boolean to turn off the default caching headers
-        transformHeaders: (headers, path) => headers, // optional transform for manipulating headers under each path (e.g.sorting), etc.
-        generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
-      },
-    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-next-seo`,
     {
@@ -65,6 +53,69 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-feed-mdx`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map((edge) => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.frontmatter.excerpt
+                    ? edge.node.frontmatter.excerpt
+                    : edge.node.excerpt,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                  copyright: copyright,
+                  language: language,
+                  site_url: site.siteMetadata.siteUrl,
+                })
+              })
+            },
+            query: `
+              {
+                allMdx(
+                  limit: 1000,
+                  filter: { fields: { type: { eq: "blog-post" } } },
+                  sort: { order: DESC, fields: [fields___date] }
+                ) {
+                  edges {
+                    node {
+                      html
+                      body
+                      fields {
+                        slug
+                        date
+                      }
+                      excerpt
+                      frontmatter {
+                        title
+                        excerpt
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/feed.xml",
+            title: "Pedro Piñera's Blog RSS Feed",
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
