@@ -1,0 +1,26 @@
+---
+title: Developer experience and Javascript
+tags: ["ux", "tooling", "javascript"]
+---
+
+In the past few months, I’ve been interacting a lot with the Javascript ecosystem and its tooling. I’ve been doing it mostly at Shopify, where React Native has become our default technology for building mobile apps. During this time, there have been many mind-blowing moments after seeing what one could achieve with Javascript, but they came at the cost of a lot of frustration. Let me unfold what I mean by frustration and why I think it’s challenging building great developer experiences upon Javascript’s foundation.
+
+First of all, let’s talk about **dependencies**. My first encounter with how dependencies are organized in Javascript was hard to process. It was a realization after going into a deep rabbit hole trying to understand React Native [auto-linking](https://www.google.com/search?client=safari&rls=en&q=react+native+autolinking&ie=UTF-8&oe=UTF-8) feature. It turns out that [Yarn](https://yarnpkg.com) and [NPM](https://www.npmjs.com) use the directory hierarchy to represent the dependency tree. They do that by nesting `node_modules` directories inside the directory of dependencies. This works well with modern Javascript processors that can bundle two versions of the same dependency without conflicting when the final bundle runs in the client-side browser. It’s not ideal, but it works. However, with a dependencies like React, where only a single version of the library is expected to be present, or with React Native dependencies with native code, where only a single version of a dependency can be linked from the app, things start to get hairy. A React Native app is not working on the simulator? Delete `node_modules`. Your React app doesn’t load on your browser, and it yields a cryptic error? Delete `node_modules`.
+
+The worst part comes when you realize that many Javascript tools are strongly coupled with how the dependency managers organize the dependencies. Put differently, any attempt to improve a not-so-great design decision is not feasible because that’d be a massive breaking change for projects using [Babel](https://babeljs.io) or [ESLint](https://eslint.org). Because of that, the industry has continued to build on top of that model, and GitHub is full of _deleting node_modules works for me_. Even the module resolution is dependent on the directory structure.
+
+Moreover, it’s common to favor tiny pages over larger ones with broader responsibilities. As a result, you might need to pull hundreds of dependencies to get your project running. At first, it might not seem problematic if the dependency manager does its job well. Still, the likelihood of a package not following semantic versioning well and causing upgrades to break the entire graph is very high. And this is common; someone tries to add a new package with `yarn add`, Yarn decides to update some dependency requirements, and the next time you try to run your app, it doesn’t work. That, as a developer, is a **terrible experience** to go through.
+
+Because of all of the above, no matter how shiny the tool or the framework you are developing is since it’s built on layers of indirection and muddy foundations, the user experience you are providing might go from being the best to be the worst. And that as a maintainer is frustrating too. You find users opening issues on your repository because they think they came across your projects and not the layers underneath.
+
+Building Javascript frameworks and tools is like constructing a building on muddy grounds. You can certainly do it, but the foundations will sooner or later have effects in people’s apartments, for example, cracks.
+
+Javascript's community seems to struggle to fix this because it’s core to the programming language and ecosystem. Instead, they build more abstractions to distance the core problem, but they don’t realize that it’s so ingrained that it bites them no matter how far it is.
+
+Javascript has cool tools and frameworks, but their usage is a rollercoaster of positive experiences and terrible ones. Javascript developers may have got used to that way of working; I’m not, and I don’t think I will. When coding, I seek positive experiences, not frustrations. I’d instead embrace a developer experience that is consistently positive over time, an experience like the one that Ruby and Rails provide, where all your energy goes into building good software and not fighting a new Babel issue that showed up.
+
+When choosing a technology stack these days, I have a strong inclination to minimize Javascript's amount. In essence, use Javascript only where it makes sense.
+
+This blog post might sound like a [DHH’s](https://twitter.com/dhh) rants above Javascript, but the more I use the programming language, the more I understand him and why he pushes for keeping Javascript away from the Rails project.
+
+There's a lot more to say about testing and code architecture when it comes to Javascript, but I'll leave that for a future blog post.
