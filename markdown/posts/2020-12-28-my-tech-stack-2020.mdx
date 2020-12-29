@@ -1,0 +1,154 @@
+---
+title: My tech stack in 2020
+tags: ["technologies", "programming languages", "tools"]
+---
+
+I'm a bit reflective today;
+I guess because we are approaching the end if this so-odd year.
+Therefore,
+I'd like to share with you what has been my preferred tech stack in 2020,
+and that most likely continue to be in 2021.
+
+## [React](https://reactjs.org) for building web frontends
+
+I really like React's approach for building declarative UIs.
+The React's movement led to an explosion of community components that make building UIs feel like LEGO,
+and great tools and processes like CSS-in-JS that save you a lot of time and improve the developer experience.
+I haven't tried [Vue](https://vuejs.org) myself therefore I can't say much about it.
+I'm not a huge fan of Facebook steering the framework,
+but I'm optimistic it'll become _(if it hasn't done already)_ a community-driven project.
+
+## [Gatsby](https://www.gatsbyjs.com) for building static websites
+
+After embracing React,
+using [Jekyll](https://jekyllrb.com) and its partials felt old-school.
+The introduction of dynamic behaviours resulted in writing imperative Javascript that called DOM APIs.
+I wanted to use React's declarative approach and GatsbyJS allowed that.
+When I came across there were a bunch of concepts that I had to learn.
+For example, its approach to decouple the UI from the data sources using a GraphQL API.
+The learning curve was a bit seep,
+but after passing it over,
+using Gatsby is a pleasure.
+And because it's built upon React,
+I can reuse components and utilities built for React.
+When I see frameworks like [Publish](https://github.com/JohnSundell/Publish) in Swift,
+a programming language that I'm emotionally attached to,
+I always think there's no way I give up on React's awesomeness and convenience.
+
+## [Netlify](https://netlify.com) for deploying static websites
+
+Netlify is an excellent example of an abstraction that improves the experience of putting a static website on production.
+They take care of providing an environment where my Gatsby websites can be built,
+and placing the resulting HTML artifacts in a CDN network that I can point my domains to.
+One of its breakthrough features is [deploy previews](https://www.netlify.com/tags/deploy-previews/).
+They deploy PRs to temporary environments so that people reviewing your PRs can check out the changes live.
+They provide many other features,
+but I haven't used them yet.
+
+## [Rails](https://rubyonrails.org) for building web services
+
+I might be a bit biased here because I work at [Shopify](https://shopify.com),
+but I really enjoy building web services with Ruby on Rails.
+I can confirm both, the programming language and the framework sparks joy when using it.
+I'm not an expert in any on both,
+but I reached a point where I feel fluent and I can't have something up and running quickly.
+What I also like about Rails and Ruby is that there's less fatigue compared to Javascript.
+If you need a database ORM, [ActiveRecord](https://guides.rubyonrails.org/active_record_basics.html) is there to help.
+If you need to expose a GraphQL API, you can use [GraphQL Ruby](https://graphql-ruby.org).
+
+Theese are the Gems that I usually add to projects:
+[Devise](https://github.com/heartcombo/devise) for authentication,
+[Pundit](https://github.com/varvet/pundit) for authorization,
+[Sidekiq](https://sidekiq.org) for running background jobs,
+[GraphQL Ruby](https://graphql-ruby.org) for defining a GraphQL API,
+[Webpacker](https://github.com/rails/webpacker) for using React as a frontend that interacts with a GraphQL API,
+and [Rubocop](https://github.com/rubocop-hq/rubocop) for code linting.
+
+## [Heroku](https://heroku.com) for deploying web services
+
+I'm not an infrastructure person and therefore I appreciate services that take care of putting my code into production.
+Netlify is that service for statically-generated websites,
+and Heroku is its counterpart for long-running services like Rails applications.
+I can create a new project,
+link it to a repository that contains a Rails app,
+and in a matter of minutes I have a Rails app up and running on production.
+Through addons I can add a [PostgreSQL](https://postgresql.org) database,
+and a Redis instance that I can point Sidekiq to.
+
+As a side note,
+I have to say I really like the `run` feature which allows me to open a Rails console with the production instance and debug issues in production:
+
+```
+heroku run rails console
+```
+
+## [GitHub Actions](https://github.com/features/actions) for continuous integration
+
+Since GitHub introduced it,
+GitHub actions became the go-to continuous integration service.
+What I like about it is that it's integrated into GitHub's UI,
+the user interface is fluid compared to other services that I've used in the past,
+and it's very easy to reuse CI logic across projects by defining actions.
+It took long for GitHub to step into the business,
+but I have to say they beat the market with a extremely high-quality product.
+
+## [TailwindCSS](https://tailwindcss.com) for styling web interfaces
+
+TailwindCSS is probably the discovery of the year.
+The framework introduced me to the concept of utility classes in CSS;
+after learning a set of semantic HTML classes that match to CSS styles,
+you can easily style your HTML without having to jump back and forth between HTML and CSS files.
+Moreover, classes delimit properties such as a color and margin to a pre-defined set of values.
+As a result, UIs look more consistent and harmonious.
+
+After coming across the framework,
+I followed the authors of it,
+x and y,
+and I've been a huge fan of the work that they've been doing.
+Another masterpiece from them is the [RefactoringUI](http://tailwindcss.com) book,
+which teaches you ideas to build beautiful and clean UIs.
+I also paid for a license for [TailwindUI](https://tailwindui.com/components),
+their set of pre-defined layouts implemented with TailwindCSS.
+
+## [Ruby](https://www.ruby-lang.org/en/) for command line tools
+
+Even though I'm building [Tuist](https://tuist.io) in Swift to make it easier for users to contribute,
+Ruby is my programming language for building CLI tools.
+It comes with the system,
+I'm extremely familiar with it,
+and there are many useful Gems from the community that I can reuse.
+Moreover,
+its dynamism makes it very suitable for experimenting ideas and workflows.
+Doing something like that in Swift would require going through Xcode and its compilation cycles,
+which takes the focus away from prototyping and hacking.
+
+## [VSCode](https://code.visualstudio.com) for editing code
+
+I love VSCode.
+It's a masterpiece from Microsoft.
+I can use it with multiple programming languages like Ruby and Typescript,
+extend it through community-built extensions,
+and configure it through workspace settings.
+Even though it's built with [Electron](https://www.google.com/search?client=safari&rls=en&q=electronjs&ie=UTF-8&oe=UTF-8),
+and that inevitably means using more computer resources than other editors that are built natively,
+I haven't tried any other editor that is as close as great as VSCode is.
+Between developer experience and efficient usage of computer resources,
+I lean more towards the former in this domain.
+
+## [React Native](https://reactnative.dev) for building apps
+
+I really like Swift and Apple's direction with [SwiftUI](https://developer.apple.com/xcode/swiftui/),
+but I can't reuse the work that I do for Apple platforms in other platforms like Android and Windows.
+[Shopify's adoption of React Native](https://shopify.engineering/react-native-future-mobile-shopify) has taught me that you can build great products in React Native;
+you just need to make the technology an implementation detail and focus on the product.
+In the recent years I've shifted from treating technology as a goal,
+to using it as a mean to build tools that solve users' problems.
+To achieve this,
+I think React Native is the most suitable option,
+and I can apply all the concepts and learnings from building web UIs with React.
+
+...and this is my preferred stack.
+What about yours?
+If you write a blog post about it and share it on Twitter,
+don't forget to tag me ([@pedropbuendia](https://twitter.com/pedropbuendia));
+I'm curious to see what other folks in the industry are using.
