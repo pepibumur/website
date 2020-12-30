@@ -77,6 +77,42 @@ const HomePage = () => {
           </Styled.p>
         </div>
       </div>
+      <Styled.h2>Prototypes</Styled.h2>
+      <div
+        sx={{
+          display: "flex",
+          flexDirection: ["column", "row"],
+          flexWrap: "wrap",
+        }}
+      >
+        <div sx={projectStyle}>
+          <Styled.h3>
+            <a
+              sx={{ variant: "styles.navlink" }}
+              href="https://github.com/backbonesh/backbone"
+            >
+              Backbone
+            </a>
+          </Styled.h3>
+          <Styled.p>
+            A modern open-source tool to manage distributed organizations.
+          </Styled.p>
+        </div>
+        <div sx={projectStyle}>
+          <Styled.h3>
+            <a
+              sx={{ variant: "styles.navlink" }}
+              href="https://github.com/bonsaijs/bonsai"
+            >
+              BonsaiJS
+            </a>
+          </Styled.h3>
+          <Styled.p>
+            A tool for building React Native apps designed for zero-configuration and developer's convenience.
+          </Styled.p>
+        </div>
+      </div>
+    
     </Layout>
   )
 }
