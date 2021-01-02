@@ -1,0 +1,24 @@
+———
+title: Hosting as a service with RedwoodJS
+tags: [“react”, “redwoodjs”, “open-source”]
+———
+
+I’ve devoted some of my spare time during Christmas prototyping how hosting as a service would be in the serverless land with a framework like [RedwoodJS](https://redwoodjs.com).
+
+This is something that open source projects like Ghost and Discourse base their business upon. You pay, and they host an instance of their software for you. In their case they use long-running servers with frameworks like Express (for NodeJS) and Rails (for Ruby). An instance maps to a paying user. For every new version of the software, they take care of deploying it across the infrastructure ensuring there’s no downtime.
+
+With RedwoodJS, there’s no long-running instances. Functions are spawned as needed and destroyed when they are done doing their job. They could be deployed once, and re-used for all the users. However, the database the functions point to depends on the user, and the user is identified by the origin domain. Here’s where the trick comes. We can extend RedwoodJS’s logic for setting up the database to get the database URL from a remote API. The same request could be reused to fetch extra metadata associated to the user. For example, the features that should be enabled/disabled depending on the plan.
+
+Compared to a full-server approach, 
+the deployment gets simplified considerably. 
+We deploy the functions and the frontend artifacts once, 
+and load balancers will point automatically to the latest version. Neat, 
+isn’t it? 
+The only bit that would require a bit of work is migrating all the databases. 
+That’s something that can by done by spawning a function for each user that calls the right Redwood command for doing the migration.
+
+I still need to figure out how to set up load balancers with an SSL certificate to do path-based secure routing. Since I come from working on client-side software, all these infrastructure-related concepts are new to me and I need to spend a fair amount of time navigating through Google Cloud’s documentation. 
+The more I read, 
+the more I understand the motivations behind building a service like Netlify.
+Unless you have unique infrastructure needs like Shopify,
+as a developer you want those infrastructure concepts to be abstracted away.
