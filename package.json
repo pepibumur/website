@@ -18,7 +18,7 @@
     "focus-visible": "^5.2.0",
     "gatsby": "^2.30.1",
     "gatsby-image": "^2.8.0",
-    "gatsby-plugin-feed": "^2.10.0",
+    "gatsby-plugin-feed": "^2.11.0",
     "gatsby-plugin-feed-mdx": "^1.0.1",
     "gatsby-plugin-manifest": "^2.10.0",
     "gatsby-plugin-mdx": "^1.8.0",
