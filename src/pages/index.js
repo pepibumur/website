@@ -81,54 +81,6 @@ const HomePage = () => {
       <p>
         I enjoy tinkering with code and prototyping ideas. These are some ideas that I'm playing with.
       </p>
-      <div
-        sx={{
-          display: "flex",
-          flexDirection: ["column", "row"],
-          flexWrap: "wrap",
-        }}
-      >
-        <div sx={projectStyle}>
-          <Styled.h3>
-            <a
-              sx={{ variant: "styles.navlink" }}
-              href="https://github.com/backbonesh/backbone"
-            >
-              Backbone
-            </a>
-          </Styled.h3>
-          <Styled.p>
-            A modern open-source tool to manage distributed organizations.
-          </Styled.p>
-        </div>
-        <div sx={projectStyle}>
-          <Styled.h3>
-            <a
-              sx={{ variant: "styles.navlink" }}
-              href="https://github.com/bonsaijs/bonsai"
-            >
-              BonsaiJS
-            </a>
-          </Styled.h3>
-          <Styled.p>
-            A tool for building React Native apps designed for zero-configuration and developer's convenience.
-          </Styled.p>
-        </div>
-        <div sx={projectStyle}>
-          <Styled.h3>
-            <a
-              sx={{ variant: "styles.navlink" }}
-              href="https://github.com/clouditjs/cloudit"
-            >
-              CloudIt
-            </a>
-          </Styled.h3>
-          <Styled.p>
-            A NodeJS tool to orchestrate the deployment of serverless apps to the cloud
-          </Styled.p>
-        </div>
-      </div>
-    
     </Layout>
   )
 }
