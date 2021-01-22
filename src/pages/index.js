@@ -77,10 +77,6 @@ const HomePage = () => {
           </Styled.p>
         </div>
       </div>
-      <Styled.h2>Prototypes</Styled.h2>
-      <p>
-        I enjoy tinkering with code and prototyping ideas. These are some ideas that I'm playing with.
-      </p>
     </Layout>
   )
 }
