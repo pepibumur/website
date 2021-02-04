@@ -8,7 +8,7 @@ I've recently spent a lot of time in [Tuist](https://tuist.io) tackling technica
 This time the work was replacing models that are very core to Tuist's domain: the graph and all the models associated to it. When I built the first graph structure, I didn't put too much thought into how it should be. I was led by intuition. I added a reference here, a subclass there, and everything seemed to work. It worked so well
 that we have built the majority of the features on top of it.
 
-We could have continued building upon that graph, but the further we moved, the clearer it was that we needed more flexibility, safety, and easier to reason about graph. Unlike the old graph that used in-memory references to represent dependencies, we implemented the new one as a `struct`.
+We could have continued building upon that graph, but the further we moved, the clearer it was that we needed more flexibility, safety, and an easier to reason about graph. Unlike the old graph that used in-memory references to represent dependencies, we implemented the new one as a `struct`.
 
 The edges of the graph are represented by dictionary key-value relantionships, and the nodes by enums. Everything is defined in a model so at a glance you can see its format. Moreover, we built a traverser that wraps it and provides efficient methods to traverse it. Those are useful when generating the projects because the logic needs to traverse the graph a few times to obtain information like what linking build phases should be added.
 
