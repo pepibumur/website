@@ -106,7 +106,7 @@ const Sections = () => {
     >
       <Avatar />
       <SectionButton title="Pedro Piñera" path="/" index={0} />
-      <SectionButton title="Blog" path="/blog" index={1} />
+      <SectionButton title="Blog" path="/" index={1} />
       <SectionButton title="About" path="/about" index={1} />
       <div sx={{ mx: "auto" }} />
       <ColorButton mode={mode} onClick={cycleMode} />

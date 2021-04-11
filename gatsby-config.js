@@ -10,7 +10,7 @@ module.exports = {
     author: `pepibumur`,
     links: {
       github: "https://github.com/pepibumur",
-      email: "mailto:pepibumur@gmail.com",
+      email: "mailto:pedropb@hey.com",
       twitter: "https://twitter.com/pedropbuendia",
       linkedin:
         "https://www.linkedin.com/in/pedro-pi%C3%B1era-buendia-9765a9125/",
