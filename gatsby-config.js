@@ -94,7 +94,6 @@ module.exports = {
                   edges {
                     node {
                       html
-                      body
                       fields {
                         slug
                         date
