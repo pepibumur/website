@@ -52,7 +52,6 @@ module.exports = {
         icon: `src/images/favicon.png`,
       },
     },
-    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-feed-mdx`,
       options: {
