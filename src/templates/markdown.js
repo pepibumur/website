@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, Styled } from "theme-ui"
 
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import { graphql, Link } from "gatsby"
 import Meta from "../components/shared/meta"
 import { MDXRenderer } from "gatsby-plugin-mdx"

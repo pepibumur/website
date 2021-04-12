@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Styled } from "theme-ui"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import Meta from "../components/shared/meta"
 import Tags from "../components/shared/tags"
 import { Link, graphql } from "gatsby"
