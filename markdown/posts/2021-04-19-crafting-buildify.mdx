@@ -1,0 +1,18 @@
+---
+title: Crafting Buildify
+tags: ["buildify", "open-source"]
+---
+
+I recently distanced myself a bit from [Tuist](https://tuist.io). The project is moving forward in the right direction and doesn't require much of my involvement. That gave me the mental space and time to explore a new open-source idea, [**Buildify**](https://github.com/craftweg/buildify).
+
+There are great options for deploying your web apps and static sites these days: Heroku, Netlify, Vercel... However, they all have in common that are VC-backed. Their interest needs to align with VCs' interests, which is usually revolves around increasing the revenue. The result? Heroku struggling to support modern web frameworks, Netlify bloating the product with many features, and Vercel focusing on making NextJS shine while leaving other frameworks as an after thought. It is what it is. It's the model that the Sillicon Valley has made believe in.
+
+I believe there's an alternative model to that one through open-source. A deployment tool that sits on top of existing cloud providers like AWS and Google Cloud and abstracts deployment intricacies to provide a great developer experience. A tool driven by its community. A tool that is open to new ideas that can be directly contributed to the project. A tool that is at the same time a platform upon which developers can build.
+
+That's what I'm envisioning Buildify to be, and I already started working on it. The main component will be a Ruby on Rails application with a React frontend, and a CLI tool implemented in Rust that takes care of running deployment tasks in virtualized cloud environments. Unlike past open-source projects of mine, I'm licensing this one under AGPL-3.0 with a business plan in it. I took inspiration from
+Plausible, which offers hosting as a service, and Mike Perham, the creator of Sidekiq, who runs a business out of AGPL-3.0-licensed projects. 
+
+And... it'll have support for coordinating the release of mobile apps too.
+
+I don't know how far I'll get with this, but it reminds me to the early days of Tuist. I feel confident about this being a great idea for the industry, and I believe its open nature will play an important role in empowering developers.
+
