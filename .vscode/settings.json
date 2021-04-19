@@ -1,5 +1,6 @@
 {
   "editor.formatOnSave": true,
+  "workbench.colorTheme": "Dracula Soft",
   "files.exclude": {
     "**/.cache/": true,
     "**/node_modules/": true
