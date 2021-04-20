@@ -1,0 +1,24 @@
+---
+title: Essential features for Buildify
+tags: ["buildify", "open-source"]
+---
+
+The idea of building [Buildify](https://github.com/craftweg/buildify) is something that I've been pondering for a long time,
+and therefore I have a well-define picture of features that I'd like to build into the tool.
+This mini-post is a list of those ideas:
+
+- **Support for mobile:** Most of the deployment tools focus on the web. There's room for mobile too. I think Buildify could help with the process of coordinating releases of mobile apps and take care of uploading binaries and assets to the stores and distribution platforms. Although we can use Docker containers in the cloud to build Android apps, it won't be as easy with iOS. We'll most likely have to provide a CLI tool or Fastlane lane to upload binaries that are built from CI pipelines.
+- **Previews:** Previews is a concept introduced by platforms like [Netlify](https://netlify.com) and [Vercel](https://vercel.com) that allows previewing changes directly on PRs.
+  This removes the need of having o merge to the main branch in order to test the changes, or in the case of mobile, to get a nighly build. I'd like to take this feature one step further and add support for disposable databases for previews that are tied to branches, and mobile app previews.
+- **Apps:** This is not a new concept. We've already seen it on platforms [Shopify](https://shopify.com) & [GitHub](https://github.com). The idea being is that Buildify will be at the same time a tool and a platform upon which developers can build extensions. I'm not sure what the API might look like, but I'm already searching from inspiration in tools that I use day-to-day.
+- **App detection:** The process of onboarding a new project on the platform should be optimized to require as few steps as possible. To achieve that, I'm thinking about running a step that processes the content of the repository and tells Buildify the projects that exist and their type. For example, there's a Rails project in this directory, and a Gatsby website in this other one. Buildify will know how to translate that to changes on the infrastructure.
+- **Bring your cloud provider:** Buildify won't provide the infrastructure. We'll give the organizations the option to add their AWS or Google Cloud configuration. The role of Buildify will be observing changes in the repositories, and translating those to changes on the infrastructure: `func deploy(repoChanges) => infrastructureChanges`.
+
+I'm incredibly excited working on Buildify.
+I think it can radically change the way developers take their code to the cloud,
+and what's best,
+it won't have any VC group behind it with shady interests.
+
+You'll see me writing more about Buildify in my future posts.
+
+Stay safe!
