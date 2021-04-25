@@ -1,0 +1,50 @@
+---
+title: Project-scoped environments
+tags: ["chimera", "craftweg", "open-source"]
+---
+
+As part of [Craftweg](https://github.com/craftweg/)'s effort of empowering developers through open source,
+and with the goal of learning [Rust](https://www.rust-lang.org/),
+I set out to build a tool,
+[Chimera](https://github.com/craftweg/chimera),
+to configure and activate project-scoped environments.
+
+As a software developer,
+one of the things that I find annoying is wasting my time debugging issues that are caused due to environment inconsistencies.
+If you work with macOS and use [Homebrew](https://brew.sh),
+it's very likely you've found yourself in this situation before because Homebrew installations led to different versions of the same tool in different environments.
+A solution for this is [Nix](https://nixos.org/).
+We use it at [Shopify](https://shopify.com) and it's made the configuration of environments much more deterministic.
+The problem though is that it has a steep learning curve that poses an entry barrier for most software teams.
+_Why would you bother learning Nix if you can do `brew install swiftlint` and move on?_
+My answer would be that is a long-term investment towards developers' productivity.
+However,
+most software teams don't think beyond a short-term solution when it allows them to achieve their goal,
+for example developing a Rails app.
+
+The idea with Chimera is to conceptually compress Nix's intricacies and building blocks to remove Nix's entry barrier.
+Projects can place a `chimera.toml` manifest file that instructs Chimera on how to set up and activate the environment when the developer enters the directory that contains it:
+
+```toml
+name = "My Project"
+
+[environment]
+RAILS_ENV = "development"
+
+# Ruby
+[packages.ruby]
+version = "2.7.2"
+[packages.ruby.bundler]
+version = "2.2.16"
+gemfile-directories = [
+    "."
+]
+
+# NodeJS
+[packages.node]
+version = "15.14.0"
+```
+
+The idea is not only to provide a tool for developers to use locally,
+but also for [Buildify](https://github.com/craftweg/buildifysh) to provision the virtual environments in which the deployment tasks will run.
+You'll see me sharing some of the learnings along the process in the shape of posts in this blog.
