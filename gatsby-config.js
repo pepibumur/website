@@ -19,6 +19,7 @@ module.exports = {
         "https://open.spotify.com/user/pepibumur?si=9fYZLPyuQOq368OoWop5rg",
       stackoverflow:
         "https://stackoverflow.com/users/963511/pedro-pi%c3%b1era-buendia",
+        gitlab: "https://gitlab.com/pepibumur"
     },
   },
   plugins: [

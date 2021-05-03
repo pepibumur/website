@@ -7,6 +7,7 @@ import {
   FaSoundcloud as SoundCloud,
   FaSpotify as Spotify,
   FaLinkedin as LinkedIn,
+  FaGitlab as GitLab
 } from "react-icons/fa"
 
 export default ({
@@ -14,6 +15,7 @@ export default ({
   githubUrl,
   soundcloudUrl,
   spotifyUrl,
+  gitlabUrl,
   linkedinUrl,
 }) => {
   return (
@@ -51,6 +53,18 @@ export default ({
               }}
             >
               <GitHub size={24} />
+            </a>
+            <a
+              target="__blank"
+              href={gitlabUrl}
+              title="GitHub"
+              sx={{
+                ml: 2,
+                mr: 3,
+                variant: "styles.navitem",
+              }}
+            >
+              <GitLab size={24} />
             </a>
             <a
               target="__blank"
