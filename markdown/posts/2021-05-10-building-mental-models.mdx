@@ -1,0 +1,24 @@
+---
+title: Building mental models
+tags: ["buildify", "open-source"]
+---
+
+As you probably know,
+I started building [Buildify](https://github.com/buildifydev),
+an open-source and AGPL-3-based tool for deployments.
+Like I did with [Tuist](https://tuist.io),
+I'm in the process of building mental models around the business domain.
+It's one of the hardest steps,
+and the most important one for the viability of the project.
+If those models are not solid enough the application might become unusable,
+and if it's not flexible enough it might limit the development of future features.
+
+As I keep thinking about the problem, some ideas are starting to emerge.
+For example, providers like [Google Cloud](https://cloud.google.com) and [AWS](https://aws.amazon.com),
+offer a serverless solution for containarized apps.
+In other words, you can provide them with your Rails application in a Docker image and they'll take care of scaling the resources are needed.
+This simplifies things a lot on our side because we are mostly responsible for building deployable artifact that can then be handed over to the cloud provider.
+For long-running services those deployable artifacts will be Docker images.
+In the case of lambda functions and static websites it'll be a tar file containing the HTML, JS, and CSS following a conventional structure.
+And for mobile apps, it'll be the Android App Bundle or app archive without signing.
+The signing will be done server-side.
