@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "gatsby-plugin-netlify": "^2.11.1",
-    "prettier": "^2.2.1",
+    "prettier": "^2.3.0",
     "slug": "^5.0.0"
   },
   "license": "MIT",
