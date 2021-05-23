@@ -1,11 +1,11 @@
-const copyright = "2019 Pedro Piñera"
+const copyright = "2021 Craftweg"
 
 const language = "en"
 
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://ppinera.es`,
-    title: `Pedro Piñera`,
+    siteUrl: `https://craftweg.com`,
+    title: `Craftweg`,
     description: `Software Engineer at Shopify where I build tools for Mobile Developers (mostly in Ruby). I'm an open source who likes to share their experiences, learnings and work. When I'm not coding Ruby or Rails, you can find me playing with Swift.`,
     author: `pepibumur`,
     links: {
@@ -44,8 +44,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Pedro Piñera`,
-        short_name: `Pedro Piñera`,
+        name: `Craftweg`,
+        short_name: `Craftweg`,
         start_url: `/`,
         background_color: `#60b2d6`,
         theme_color: `#60b2d6`,
@@ -110,7 +110,7 @@ module.exports = {
               }
             `,
             output: "/feed.xml",
-            title: "Pedro Piñera's Blog RSS Feed",
+            title: "Craftweg's Blog RSS Feed",
           },
         ],
       },

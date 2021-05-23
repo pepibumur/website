@@ -101,7 +101,7 @@ export default ({
               <LinkedIn size={24} />
             </a>
           </div>
-          <small>Copyright © Pedro Piñera, 2019</small>
+          <small>Copyright © Craftweg, 2021</small>
         </div>
       </BodyMargin>
     </footer>

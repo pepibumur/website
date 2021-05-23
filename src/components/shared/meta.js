@@ -95,6 +95,7 @@ Meta.defaultProps = {
     `shopify`,
     `ruby`,
     `pedro piñera`,
+    `craftweg`
   ],
 }
 

@@ -105,7 +105,7 @@ const Sections = () => {
       }}
     >
       <Avatar />
-      <SectionButton title="Pedro Piñera" path="/" index={0} />
+      <SectionButton title="Craftweg" path="/" index={0} />
       <SectionButton title="Blog" path="/" index={1} />
       <SectionButton title="About" path="/about" index={1} />
       <div sx={{ mx: "auto" }} />
