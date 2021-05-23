@@ -145,5 +145,6 @@ module.exports = {
     },
     `gatsby-plugin-theme-ui`,
     `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-netlify`
   ],
 }

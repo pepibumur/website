@@ -34,7 +34,10 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 }
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
+  if (process.env.REDIRECT_TO_CRAFTWEG) {
+    createRedirect({ fromPath: "/*", toPath: "/*", isPermanent: true })
+  }
   const fetchBlogPosts = graphql(
     `
       {
